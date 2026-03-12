@@ -25,7 +25,8 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    flex-direction: column;
     /* align-items: center; */
     background-color: var(--black-800);
     /* padding: 10px; */
@@ -34,7 +35,7 @@
 
 .header {
     max-width: 1000px;
-    width: 100%;
+    width: calc(100% - 40px);
     height: fit-content;
     display: flex;
     justify-content: space-around;
@@ -45,6 +46,7 @@
     margin: 10px;
     border-radius: 10px;
     user-select: none;
+    align-self: center;
 }
 
 .kronosHeaderTitle {
@@ -52,7 +54,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .headerBtnDiv {
@@ -95,4 +96,27 @@
 .headerBtnDiv .headerBtn:nth-child(odd) {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+}
+
+.mainContent {
+    /* background: red; */
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    /* background-color: var(--black-700);
+    border: 2px solid var(--black-600); */
+}
+
+.mainContentBtn {
+    flex: 1;
+    background: var(--black-700);
+    border-radius: 10px;
+    border: 2px solid var(--black-600);
+    padding: 10px;
+    cursor: pointer;
 }
