@@ -1,8 +1,11 @@
 import { BookOpenText, Database, HomeIcon, Settings } from "lucide-react";
 import "./App.css";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 
 const Home = () => {
+    const navigate = useNavigate();
     const audioRef = useRef(new Audio("/sounds/Water-Drop.mp3"));
     function playWaterDrop() {
         audioRef.current.volume = 0.3;
@@ -14,11 +17,11 @@ const Home = () => {
         <div className="container">
             <header className="header">
                 <div className="headerBtnDiv">
-                    <button className="headerBtn" onClick={playWaterDrop}>
+                    <button data-tooltip-id="myTooltip" data-tooltip-content="Visualizar Home" className="headerBtn" onClick={playWaterDrop}>
                         <HomeIcon />
                     </button>
 
-                    <button className="headerBtn" onClick={playWaterDrop}>
+                    <button data-tooltip-id="myTooltip" data-tooltip-content="Visualizar Banco" className="headerBtn" onClick={playWaterDrop}>
                         <Database />
                     </button>
                 </div>
@@ -28,13 +31,17 @@ const Home = () => {
                 </p>
 
                 <div className="headerBtnDiv">
-                    <button className="headerBtn" onClick={playWaterDrop}>
+                    <button data-tooltip-id="myTooltip" data-tooltip-content="Sobre os Autores" className="headerBtn" onClick={playWaterDrop}>
                         <BookOpenText />
                     </button>
 
-                    <button className="headerBtn" onClick={playWaterDrop}>
+                    <button data-tooltip-id="myTooltip" data-tooltip-content="Abrir configurações" className="headerBtn" onClick={() => {
+                        playWaterDrop();
+                        navigate("/settings");
+                    }}>
                         <Settings />
                     </button>
+
                 </div>
             </header>
 
@@ -55,6 +62,8 @@ const Home = () => {
                     D
                 </div>
             </div>
+
+            <Tooltip id="myTooltip" />   
         </div>
     );
 }
