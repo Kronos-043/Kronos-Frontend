@@ -1,0 +1,47 @@
+.enabled {
+    background-color: #4F4F4F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    border-radius: 20px;
+}
+
+.disabled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #7C7C7C;
+    position: relative;
+    flex: 1;
+    border-radius: 20px;
+}
+
+.ball1 {
+    border-radius: 100%;
+    width: 30%;
+    height: 75%;
+    background-color: #181818;
+    position: absolute;
+    left: 5px;
+}
+
+.ball2 {
+    border-radius: 100%;
+    width: 30%;
+    height: 75%;
+    background-color: #181818;
+    position: absolute;
+    right: 5px;
+}
+
+.checkboxHolder {
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    border-radius: 20px;
+    background-color: #181818;
+    height: 40%;
+    padding: 4px;
+}

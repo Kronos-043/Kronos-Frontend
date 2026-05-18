@@ -11,19 +11,19 @@ const Home = () => {
 
             <div className="mainContent">
                 <div className="mainContentBtn">
-                    A
+                    <div className="iconContentBtn" />
                 </div>
 
                 <div className="mainContentBtn">
-                    B
+                    <div className="iconContentBtn" />
                 </div>
 
                 <div className="mainContentBtn">
-                    C
+                    <div className="iconContentBtn" />
                 </div>
 
                 <div className="mainContentBtn">
-                    D
+                    <div className="iconContentBtn" />
                 </div>
             </div>
         </div>

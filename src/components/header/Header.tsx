@@ -18,20 +18,23 @@ const Header = () => {
     return(
         <header className="header">
             <div className="headerBtnDiv">
-                <button data-tooltip-id="myTooltip" data-tooltip-content="Visualizar Home" className="headerBtn" onClick={playWaterDrop}>
+                <button data-tooltip-id="myTooltip" data-tooltip-content="Visualizar home" className="headerBtn" onClick={() => {
+                    playWaterDrop();
+                    navigate("/");
+                }}>
                     <HomeIcon />
                 </button>
 
-                <button data-tooltip-id="myTooltip" data-tooltip-content="Visualizar Banco" className="headerBtn" onClick={playWaterDrop}>
+                <button data-tooltip-id="myTooltip" data-tooltip-content="Horários passados" className="headerBtn" onClick={playWaterDrop}>
                     <Database />
                 </button>
             </div>
             <p className="kronosHeaderTitle">
-                Kronos
+                {/* Kronos */}
             </p>
 
             <div className="headerBtnDiv">
-                <button data-tooltip-id="myTooltip" data-tooltip-content="Sobre os Autores" className="headerBtn" onClick={playWaterDrop}>
+                <button data-tooltip-id="myTooltip" data-tooltip-content="Sobre os autores" className="headerBtn" onClick={playWaterDrop}>
                     <BookOpenText />
                 </button>
 
