@@ -66,7 +66,9 @@ const Settings = () => {
 
                         </div>
 
-                        <div className="optHolder"></div>
+                        <div className="optHolder">
+                            
+                        </div>
                     </div>
 
                     <div className="holder2">

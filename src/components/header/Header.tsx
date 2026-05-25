@@ -34,7 +34,10 @@ const Header = () => {
             </p>
 
             <div className="headerBtnDiv">
-                <button data-tooltip-id="myTooltip" data-tooltip-content="Sobre os autores" className="headerBtn" onClick={playWaterDrop}>
+                <button data-tooltip-id="myTooltip" data-tooltip-content="Sobre os autores" className="headerBtn" onClick={() => {
+                    playWaterDrop();
+                    navigate("/about");
+                }}>
                     <BookOpenText />
                 </button>
 

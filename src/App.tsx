@@ -10,21 +10,21 @@ const Home = () => {
             <Header />
 
             <div className="mainContent">
-                <div className="mainContentBtn">
+                <button className="mainContentBtn">
                     <div className="iconContentBtn" />
-                </div>
+                </button>
 
-                <div className="mainContentBtn">
+                <button className="mainContentBtn">
                     <div className="iconContentBtn" />
-                </div>
+                </button>
 
-                <div className="mainContentBtn">
+                <button className="mainContentBtn">
                     <div className="iconContentBtn" />
-                </div>
+                </button>
 
-                <div className="mainContentBtn">
+                <button className="mainContentBtn" onClick={() => navigate("/classes")}>
                     <div className="iconContentBtn" />
-                </div>
+                </button>
             </div>
         </div>
     );

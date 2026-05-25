@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: none;
+    font-family: Consolas, 'Courier New', monospace;
+    color: var(--black-50);
+}
+
+:root {
+    --black-50: #f1f1f1;
+    --black-100: #dbdbdb;
+    --black-200: #bababa;
+    --black-300: #9d9d9d;
+    --black-400: #838383;
+    --black-500: #6b6b6b;
+    --black-600: #545454;
+    --black-700: #3f3f3f;
+    --black-800: #2c2c2c;
+    --black-900: #1a1a1a;
+    --black-950: #000000;
+}
+
+.containerClasses {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* align-items: center; */
+    background-color: var(--black-800);
+    /* padding: 10px; */
+    overflow: hidden;
+}
+
+.mainContent2Classes {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    margin: 10px;
+    padding: 10px;
+    /* border-radius: 10px; */
+    /* background-color: var(--black-700);
+    border: 2px solid var(--black-600); */
+}
+
+.biggestHalfContentClasses{
+    /* Grid temporário, vai usar map */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--black-700);
+    border: 2px solid var(--black-600);
+    transition: all 0.2s;
+}
+
+.smallestHalfContentClasses{
+    /* display: flex; */
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--black-700);
+    border: 2px solid var(--black-600);
+    transition: all 0.2s;
+}
+
+.classItem {
+    cursor: pointer;
+    flex: 1;
+    background-color: var(--black-800);
+    border-radius: 10px;
+}
