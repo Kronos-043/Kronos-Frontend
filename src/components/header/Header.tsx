@@ -1,4 +1,4 @@
-import { BookOpenText, Database, HomeIcon, Settings } from "lucide-react";
+import { BookOpenText, History, HomeIcon, Settings } from "lucide-react";
 import "./Header.css";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
@@ -22,30 +22,30 @@ const Header = () => {
                     playWaterDrop();
                     navigate("/");
                 }}>
-                    <HomeIcon />
+                    <HomeIcon size={18} />
                 </button>
 
-                <button data-tooltip-id="myTooltip" data-tooltip-content="Horários passados" className="headerBtn" onClick={playWaterDrop}>
-                    <Database />
+                <button data-tooltip-id="myTooltip" data-tooltip-content="Horários passados" className="headerBtn" onClick={() => {
+                    playWaterDrop();
+                    navigate("/lastSchedules");
+                }}>
+                    <History size={18} />
                 </button>
             </div>
-            <p className="kronosHeaderTitle">
-                {/* Kronos */}
-            </p>
 
             <div className="headerBtnDiv">
                 <button data-tooltip-id="myTooltip" data-tooltip-content="Sobre os autores" className="headerBtn" onClick={() => {
                     playWaterDrop();
                     navigate("/about");
                 }}>
-                    <BookOpenText />
+                    <BookOpenText size={18} />
                 </button>
 
                 <button data-tooltip-id="myTooltip" data-tooltip-content="Abrir configurações" className="headerBtn" onClick={() => {
                     playWaterDrop();
                     navigate("/settings");
                 }}>
-                    <Settings />
+                    <Settings size={18} />
                 </button>
 
             </div>

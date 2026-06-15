@@ -25,40 +25,85 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
-    /* align-items: center; */
     background-color: var(--black-800);
-    /* padding: 10px; */
     overflow: hidden;
 }
 
 .mainContent {
-    /* background: red; */
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    gap: 8px;
+}
+
+.welcomeTitle {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--black-100);
+}
+
+.welcomeSubtitle {
+    font-size: 14px;
+    color: var(--black-400);
+    margin-bottom: 32px;
+}
+
+.gridContent {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 20px;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    /* background-color: var(--black-700);
-    border: 2px solid var(--black-600); */
+    gap: 24px;
+    width: 100%;
+    max-width: 560px;
 }
 
 .mainContentBtn {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     background: var(--black-700);
-    border-radius: 10px;
+    border-radius: 12px;
     border: 2px solid var(--black-600);
-    padding: 20px;
+    padding: 32px 20px;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mainContentBtn:hover {
+    background: var(--black-600);
+    border-color: var(--black-400);
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mainContentBtn:active {
+    transform: scale(0.97);
+    transition: all 0.05s ease;
 }
 
 .iconContentBtn {
-    width: 45%;
-    height: 100%;
-    border-radius: 10px;
-    background: #4F4F4F;
+    color: var(--black-200);
+    transition: color 0.2s ease;
+}
+
+.mainContentBtn:hover .iconContentBtn {
+    color: var(--black-50);
+}
+
+.btnLabel {
+    font-size: 15px;
+    color: var(--black-300);
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.mainContentBtn:hover .btnLabel {
+    color: var(--black-50);
 }

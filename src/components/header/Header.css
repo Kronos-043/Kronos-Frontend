@@ -3,33 +3,28 @@
     width: calc(100% - 40px);
     height: fit-content;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     border: 2px solid var(--black-600);
     background-color: var(--black-700);
-    padding: 10px;
+    padding: 12px 10px;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
     user-select: none;
     align-self: center;
-}
-
-.kronosHeaderTitle {
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
 .headerBtnDiv {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     align-items: center;
-    padding-block: 10px;
+    padding: 8px;
     border-radius: 10px;
     width: 200px;
-    border: 2px solid var(--black-600)
+    border: 2px solid var(--black-600);
 }
 
 .headerBtn {
@@ -39,8 +34,13 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    height: 30px;
-    transition: all 0.2s;
+    height: 34px;
+    transition: all 0.2s ease;
+    color: var(--black-300);
+}
+
+.headerBtn svg {
+    transition: color 0.2s ease;
 }
 
 .headerBtn:hover {
@@ -48,9 +48,13 @@
     transform: scale(1.05);
 }
 
+.headerBtn:hover svg {
+    color: var(--black-50);
+}
+
 .headerBtn:active {
-    transform: scale(0.95);
-    transition: all 0s;
+    transform: scale(0.93);
+    transition: all 0.05s ease;
 }
 
 .headerBtnDiv .headerBtn:nth-child(even) {
